@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <script  src="http://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+    <title>Tours</title>
+</head>
+<body>
+    <header>
+        <h1 id="majHeading">Holiday Packages</h1>
+    </header>
+    <section>
+        <table class="redBorder">
+            <caption>Weekend Packages</caption>
+            <thead>
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Package Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pondy</td>
+                    <td>4500</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mahabalipuram</td>
+                    <td>6200</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ooty</td>
+                    <td>7900</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+        <button id="addButton">Add Row</button>
+    </section>
+    <section>
+        <h2>Holiday Destinations</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                        <img src="images/pondi.jpg" alt="Pondicherry" class="logo blueBorder">
+                        <p>In 1674 the French East India Company set up a trading centre at Pondicherry and this outpost eventually became the chief French settlement in India. Five trading posts were established along the south Indian coast between 1668 and 1674.</p>
+                </div>
+                <div class="col-sm-6">
+                        <img src="images/mahab.jpg" alt="Mahabalipuram" class="logo blueBorder">
+                        <p>Mahabalipuram is known by several names, including Mamallapuram; Mamalla means "Great Wrestler", and refers to the 7th-century king Narasimha Varman I. Other names found in historic texts include Mahabalipur which refer to a "great wrestler city". </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                        <img src="images/ooty.jpg" alt="Ooty" class="logo blueBorder">
+                        <p>Udagamandalam was originally a tribal land occupied by the Toda and Badagas along with other hill tribes who coexisted through specialisation and trade. The major tribes of Nilgiris area are the Toda, Kota, Irula and Kurumba.The Baduga language is a dialect of Kannada.</p>
+                </div>
+                <div class="col-sm-6">
+                        <img src="images/kodai.jpg" alt="Kodaikannal" class="logo blueBorder">
+                        <p>Kodaikanal is a city in the hills of the Dindigul district in the state of Tamil Nadu, India.Its name in the Tamil language means "The Gift of the Forest".Kodaikanal is referred to as the "Princess of Hill stations" and has a long history as a retreat and popular tourist destination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    
+    <script>
+        $(function(){
+            $('#addButton').on('click', function(){
+                console.log("Click event fired");
+                var newRow = "<tr><td>4</td><td>Kodai</td><td>5456</td></tr>"
+                $("table").append(newRow)
+            })
+        })
+    </script>
+</body>
+
+</html>
